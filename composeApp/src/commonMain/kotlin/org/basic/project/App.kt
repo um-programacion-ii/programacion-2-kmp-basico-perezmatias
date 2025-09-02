@@ -172,6 +172,10 @@ class ThirdScreen: Screen {
             ) {
                 Text(text = "Volver a la Primera Pantalla")
             }
+
+            Spacer(
+                modifier = Modifier.height(height = 30.dp)
+            )
         }
     }
 }
