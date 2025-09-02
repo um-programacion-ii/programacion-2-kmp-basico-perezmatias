@@ -34,6 +34,7 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 
 import kmpbasico.composeapp.generated.resources.Res
 import kmpbasico.composeapp.generated.resources.compose_multiplatform
+import org.basic.project.bottonBar.BottomBarScreen
 
 @Composable
 fun App() {
@@ -112,6 +113,20 @@ class MainScreen: Screen {
             ) {
                 Text(text = "Ir a Tercera Pantalla")
             }
+
+            Spacer(modifier = Modifier.height(height = 30.dp))
+
+            Button(
+                onClick = {
+                    navigator.push(
+                        item = BottomBarScreen()
+                    )
+                }
+            ) {
+                Text(
+                    text = "BottomBar"
+                )
+            }
         }
     }
 }
@@ -172,10 +187,6 @@ class ThirdScreen: Screen {
             ) {
                 Text(text = "Volver a la Primera Pantalla")
             }
-
-            Spacer(
-                modifier = Modifier.height(height = 30.dp)
-            )
         }
     }
 }
